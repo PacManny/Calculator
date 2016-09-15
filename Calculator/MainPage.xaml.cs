@@ -32,8 +32,8 @@ namespace Calculator
         //public CalculatorControlViewModel CalculatorView { get; set; }
         Engine CalculatorEngine = new Engine();
  
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+// making changes to the Modelview
+e        private void Button_Click(object sender, RoutedEventArgs e)
         {
             string operandString;
             double operandDouble;

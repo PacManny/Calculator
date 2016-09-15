@@ -10,45 +10,45 @@ namespace Calculator
 {
     public class CalculatorControls
     {
-        public string Display;
-        public string input;
-        private List<double> equation;
-        public string testText = "1";
-        Engine CalculatorEngine = new Engine();
+    //    public string Display;
+    //    public string input;
+    //    private List<double> equation;
+    //    public string testText = "1";
+    //    Engine CalculatorEngine = new Engine();
 
-        public string ButtonControl(object sender)
-        {
-            Button ThisButton = (Button)sender;
-            string tag = "number";
-            double temp;
-            equation = new List<double>();
+    //    public string ButtonControl(object sender)
+    //    {
+    //        Button ThisButton = (Button)sender;
+    //        string tag = "number";
+    //        double temp;
+    //        equation = new List<double>();
             
-                if (ThisButton.Tag.ToString() == tag)
+    //            if (ThisButton.Tag.ToString() == tag)
 
-                {
-                    Display = "";
-                    input += ThisButton.Content;
-                    Display += input;
-                double.TryParse(input, out temp);
-                equation.Add(temp);
-                    return Display;
-                }
-                else
-                {
-                return "";
-            }
-        }
-    }
+    //            {
+    //                Display = "";
+    //                input += ThisButton.Content;
+    //                Display += input;
+    //            double.TryParse(input, out temp);
+    //            equation.Add(temp);
+    //                return Display;
+    //            }
+    //            else
+    //            {
+    //            return "";
+    //        }
+    //    }
+    //}
 
-    public class CalculatorControlViewModel
-    {
+    //public class CalculatorControlViewModel
+    //{
 
-        private CalculatorControls defaultCalculatorControls = new CalculatorControls();
-        public CalculatorControls  DefaultCalculatorControls {
-            get
-            {
-                return this.defaultCalculatorControls;
-            }
-        }
+    //    private CalculatorControls defaultCalculatorControls = new CalculatorControls();
+    //    public CalculatorControls  DefaultCalculatorControls {
+    //        get
+    //        {
+    //            return this.defaultCalculatorControls;
+    //        }
+    //    }
     }
 }
