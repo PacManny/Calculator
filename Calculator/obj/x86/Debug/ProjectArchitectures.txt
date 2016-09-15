@@ -1,0 +1,1 @@
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Calculator.csproj;x86
