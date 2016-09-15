@@ -31,58 +31,57 @@ namespace Calculator
         }
         //public CalculatorControlViewModel CalculatorView { get; set; }
         Engine CalculatorEngine = new Engine();
- 
-// making changes to the Modelview
-e        private void Button_Click(object sender, RoutedEventArgs e)
+        public string OperandString { set; get; }
+        // making changes to the Modelview
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string operandString;
-            double operandDouble;
-            int lastIndexedOperand;
-            string lastIndexedOperator;
-            Button ThisButton = (Button)sender;
-            operandString = ThisButton.Content.ToString();
-            try
+            string lastEntry = string.Empty;
+            double operand;
+            Button thisButton = (Button)sender;
+            lastEntry = thisButton.Content.ToString();
+            if (!ContainsOperator(lastEntry))
             {
-                operandDouble = Convert.ToDouble(operandString);
-                CalculatorEngine.Operands.Add(operandDouble);
+                OperandString += thisButton.Content.ToString();
             }
-            catch
-
-
-            lastIndexedOperator = CalculatorEngine.Operators.Add(operandString);
-            if (ContainsOperator(CalculatorEngine.Operators[]))
-                {
-
+            else {
+                try {
+                    operand = Convert.ToDouble(OperandString);
+                    CalculatorEngine.Operands.Add(operand);
+                    Display.Text = "pressed operator";
                 }
-
+                catch
+                {
+                    OperandString = OperandString.Remove(OperandString.Count() - lastEntry.Length - 1);
+                }
             }
+            Display.Text = OperandString;
+
+        }
 
 
-            lastIndexedOperand = CalculatorEngine.Operands.Count() - 1;
-            Display.Text += CalculatorEngine.Operands[lastIndexedOperand];
      
 
             
-    }
-        public void Equals()
-        {
-            Displayed = "";
-            SecondSavedOperand = input;
-            OperationsDisplay.Text = string.Empty;
-            if (CalculatorEngine.flag)
-            {
-                FirstSavedOperand = CalculatorEngine.Total.ToString();
-                CalculatorEngine.doCalculation(FirstSavedOperand, SecondSavedOperand);
-                Display.Text = CalculatorEngine.Total.ToString();
+  
+        //public void Equals()
+        //{
+        //    Displayed = "";
+        //    SecondSavedOperand = input;
+        //    OperationsDisplay.Text = string.Empty;
+        //    if (CalculatorEngine.flag)
+        //    {
+        //        FirstSavedOperand = CalculatorEngine.Total.ToString();
+        //        CalculatorEngine.doCalculation(FirstSavedOperand, SecondSavedOperand);
+        //        Display.Text = CalculatorEngine.Total.ToString();
 
-            }
-            else {
-                CalculatorEngine.doCalculation(FirstSavedOperand, SecondSavedOperand);
-                Display.Text = CalculatorEngine.Total.ToString();
-                CalculatorEngine.flag = true;
-            }
+        //    }
+        //    else {
+        //        CalculatorEngine.doCalculation(FirstSavedOperand, SecondSavedOperand);
+        //        Display.Text = CalculatorEngine.Total.ToString();
+        //        CalculatorEngine.flag = true;
+        //    }
 
-        }
+        //}
 
         public bool ContainsOperator(string MathOperator)
         {
@@ -176,3 +175,4 @@ e        private void Button_Click(object sender, RoutedEventArgs e)
         //  }
     }
 }
+

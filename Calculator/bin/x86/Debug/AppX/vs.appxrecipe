@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>d2fd3dd7-002c-49f7-8812-72e87cdcbc2a</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\eromero\Documents\GitHub\Calculator\Calculator\obj\x86\Debug\</IntermediateOutputPath>
     <RegisteredManifestChecksum>620ED7FCD883DF25E95E300074B66E152721A714C0066FE1EC16A6EA46A6EDE7</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>d2fd3dd7-002c-49f7-8812-72e87cdcbc2a_1.0.0.0_x86__at9r21pa8w28m</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>d2fd3dd7-002c-49f7-8812-72e87cdcbc2a_at9r21pa8w28m!App</RegisteredUserModeAppID>
@@ -19,16 +19,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-09-12T19:40:00.792</Modified>
+      <Modified>2016-09-15T12:18:18.113</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\bin\x86\Debug\Calculator.exe">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\bin\x86\Debug\Calculator.exe">
       <PackagePath>entrypoint\Calculator.exe</PackagePath>
-      <Modified>2016-09-12T19:40:00.498</Modified>
+      <Modified>2016-09-15T12:18:17.802</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\eromero\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -454,49 +454,49 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-08-01T17:39:39.049</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\ApplicationInsights.config">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
       <Modified>2016-09-02T16:34:47.505</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2016-09-02T16:34:39.685</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2015-10-11T02:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-11T02:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-11T02:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-11T02:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-11T02:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-11T02:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-10-11T02:09:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\bin\x86\Debug\Calculator.xr.xml">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\bin\x86\Debug\Calculator.xr.xml">
       <PackagePath>Calculator.xr.xml</PackagePath>
       <Modified>2016-09-09T18:01:22.298</Modified>
     </AppxPackagedFile>
@@ -504,13 +504,13 @@
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2016-02-25T12:22:28.691</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-09-12T19:15:18.526</Modified>
+      <Modified>2016-09-15T12:04:31.017</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\bin\x86\Debug\Core\Calculator.exe">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\bin\x86\Debug\Core\Calculator.exe">
       <PackagePath>Calculator.exe</PackagePath>
-      <Modified>2016-09-12T19:40:00.789</Modified>
+      <Modified>2016-09-15T12:18:18.111</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

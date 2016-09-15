@@ -9,16 +9,16 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>d2fd3dd7-002c-49f7-8812-72e87cdcbc2a</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\eromero\Documents\GitHub\Calculator\Calculator\obj\x86\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\bin\x86\Debug\Calculator.exe">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\bin\x86\Debug\Calculator.exe">
       <PackagePath>entrypoint\Calculator.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\eromero\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
@@ -339,49 +339,49 @@
     <AppxPackagedFile Include="C:\Users\eromero\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\ApplicationInsights.config">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\bin\x86\Debug\Calculator.xr.xml">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\bin\x86\Debug\Calculator.xr.xml">
       <PackagePath>Calculator.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\eromero\Documents\Visual Studio 2015\Projects\Calculator\Calculator\bin\x86\Debug\Core\Calculator.exe">
+    <AppxPackagedFile Include="C:\Users\eromero\Documents\GitHub\Calculator\Calculator\bin\x86\Debug\Core\Calculator.exe">
       <PackagePath>Calculator.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

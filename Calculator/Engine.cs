@@ -31,6 +31,9 @@ namespace Calculator
                 case "/":
                     doDivision(FirstSavedOperand, SecondSavedOperand);
                     break;
+                case "=":
+                    doEquals(FirstSavedOperand, SecondSavedOperand);
+                    break;
                 default:
                     break;
 
@@ -54,6 +57,9 @@ namespace Calculator
         {
             Total = mathLayer.Multiply(FirstNumber, SecondNumber);
         }
-
+        public void doEquals(double FirstNumber, double SecondNumber)
+        {
+            Total = 0;
+        }
     }
 }
