@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,154 +26,59 @@ namespace Calculator
         public MainPage()
         {
             this.InitializeComponent();
+            Display.Text = "0";
             //this.CalculatorView = new CalculatorControlViewModel();
-            CalculatorEngine.Operands = new List<double>();
-            CalculatorEngine.Operators = new List<string>();
         }
+        CalculatorEngine XamlCalculatorEngine = new CalculatorEngine();
         //public CalculatorControlViewModel CalculatorView { get; set; }
-        Engine CalculatorEngine = new Engine();
-        public string OperandString { set; get; }
-        // making changes to the Modelview
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string lastEntry = string.Empty;
-            double operand;
-            Button thisButton = (Button)sender;
-            lastEntry = thisButton.Content.ToString();
-            if (!ContainsOperator(lastEntry))
-            {
-                OperandString += thisButton.Content.ToString();
-            }
-            else {
-                try {
-                    operand = Convert.ToDouble(OperandString);
-                    CalculatorEngine.Operands.Add(operand);
-                    Display.Text = "pressed operator";
-                }
-                catch
-                {
-                    OperandString = OperandString.Remove(OperandString.Count() - lastEntry.Length - 1);
-                }
-            }
-            Display.Text = OperandString;
+            Button calculatorButton = (Button)sender;
+            XamlCalculatorEngine.AddToNumericalBattleGround(calculatorButton.Content.ToString());
+            Display.Text = XamlCalculatorEngine.DisplayedNumber;
 
+
+
+            //if (ContainsNumber(lastEntry))
+            //{
+            //    OperandString.Append(lastEntry);
+            //    DefaultNumber += OperandString;
+            //    Display.Text = OperandString.ToString();
+            //}
+            //else if (ContainsOperator(lastEntry))
+            //{
+
+            //    CalculatorEngine.Operators.Add(lastEntry);
+            //    if (calculate)
+            //    {
+            //        if (ThatButton == thisButton)
+            //        {
+            //            CalculatorEngine.OperandToList(DefaultNumber);
+            //            DefaultNumber = "";
+            //        }
+            //        Display.Text = CalculatorEngine.ComputeCalculation().ToString();
+            //        DefaultNumber = "";
+            //        calculate = false;
+            //    }
+            //    else
+            //    {
+            //        CalculatorEngine.OperandToList(OperandString);
+            //        calculate = true;
+            //    }
+            //    OperandString = "";
+            //    ThatButton = thisButton;
+
+
+
+            //}
+            //else
+            //{
+            //    OperationsDisplay.Text = lastEntry;
+            //}
         }
 
-
-     
-
-            
-  
-        //public void Equals()
-        //{
-        //    Displayed = "";
-        //    SecondSavedOperand = input;
-        //    OperationsDisplay.Text = string.Empty;
-        //    if (CalculatorEngine.flag)
-        //    {
-        //        FirstSavedOperand = CalculatorEngine.Total.ToString();
-        //        CalculatorEngine.doCalculation(FirstSavedOperand, SecondSavedOperand);
-        //        Display.Text = CalculatorEngine.Total.ToString();
-
-        //    }
-        //    else {
-        //        CalculatorEngine.doCalculation(FirstSavedOperand, SecondSavedOperand);
-        //        Display.Text = CalculatorEngine.Total.ToString();
-        //        CalculatorEngine.flag = true;
-        //    }
-
-        //}
-
-        public bool ContainsOperator(string MathOperator)
-        {
-            List<string> validOperators = new List<string> { "+", "-", "/", "*", "=" };
-            return validOperators.Contains(MathOperator);
-
-        }
-
-        //  private void ButtonAdd_Click(object sender, RoutedEventArgs e)
-        //  {
-        //      input = this.Display.Text;
-        //      FirstSavedOperand = input;
-        //      CalculatorEngine.SavedOperator = "+";
-        //      Displayed += input + " + ";
-        //      OperationsDisplay.Text = Displayed;
-        //      input = string.Empty;
-        //  }
-
-        //  private void ButtonSubtract_Click(object sender, RoutedEventArgs e)
-        //  {
-        //      input = this.Display.Text;
-        //      FirstSavedOperand = input;
-        //      CalculatorEngine.SavedOperator = "-";
-        //      Displayed += input + " - ";
-        //      OperationsDisplay.Text = Displayed;
-        //      input = string.Empty;
-        //  }
-
-        //  private void ButtonMultiply_Click(object sender, RoutedEventArgs e)
-        //  {
-        //      input = this.Display.Text;
-        //      FirstSavedOperand = input;
-        //      CalculatorEngine.SavedOperator = "x";
-        //      Displayed += input + " x ";
-        //      OperationsDisplay.Text = Displayed;
-        //      input = string.Empty;
-        //  }
-
-        //  private void ButtonDivide_Click(object sender, RoutedEventArgs e)
-        //  {
-        //      input = this.Display.Text;
-        //      FirstSavedOperand = input;
-        //      CalculatorEngine.SavedOperator = "+";
-        //      Displayed += input + " + ";
-        //      OperationsDisplay.Text = Displayed;
-        //      input = string.Empty;
-        //  }
-
-        //  private void ButtonNegate_Click(object sender, RoutedEventArgs e)
-        //  {
-        //      if (input.Contains("-"))
-        //      {
-        //          input = input.TrimStart('-');
-        //      }
-        //      else {
-        //          FirstSavedOperand = input;
-        //          input = "-" + input;
-        //      }
-        //      Display.Text = input;
-        //  }
-
-        //  private void ButtonBack_Click(object sender, RoutedEventArgs e)
-        //  {
-        //      int index = input.Count();
-        //      try
-        //      {
-        //          input = input.Remove(index - 1, 1);
-        //      }
-        //      catch
-        //      {
-        //          input = "0";
-        //      }
-        //      Display.Text = input;
-        //  }
-
-        //  private void ButtonClear_Click(object sender, RoutedEventArgs e)
-        //  {
-        //      CalculatorEngine.flag = false;
-        //      OperationsDisplay.Text = "";
-        //      input = "";
-        //      Display.Text = "0";
-        //      CalculatorEngine.Total = 0.0;
-        //      CalculatorEngine.SavedOperator = "";
-        //      Displayed = "";
-        //  }
-
-        //  private void ButtonClearEntry_Click(object sender, RoutedEventArgs e)
-        //  {
-        //      input = "";
-        //      Display.Text = "0";
-        //  }
+        
     }
 }
 

@@ -132,17 +132,15 @@ namespace Calculator.Calculator_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[4];
+            _typeNameTable = new string[3];
             _typeNameTable[0] = "Calculator.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "String";
 
-            _typeTable = new global::System.Type[4];
+            _typeTable = new global::System.Type[3];
             _typeTable[0] = typeof(global::Calculator.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::System.String);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -192,7 +190,6 @@ namespace Calculator.Calculator_XamlTypeInfo
             case 0:   //  Calculator.MainPage
                 userType = new global::Calculator.Calculator_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_MainPage;
-                userType.AddMemberName("OperandString");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -204,40 +201,16 @@ namespace Calculator.Calculator_XamlTypeInfo
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::Calculator.Calculator_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
-
-            case 3:   //  String
-                xamlType = new global::Calculator.Calculator_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
             }
             return xamlType;
         }
 
 
-        private object get_0_MainPage_OperandString(object instance)
-        {
-            var that = (global::Calculator.MainPage)instance;
-            return that.OperandString;
-        }
-        private void set_0_MainPage_OperandString(object instance, object Value)
-        {
-            var that = (global::Calculator.MainPage)instance;
-            that.OperandString = (global::System.String)Value;
-        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::Calculator.Calculator_XamlTypeInfo.XamlMember xamlMember = null;
-            global::Calculator.Calculator_XamlTypeInfo.XamlUserType userType;
-
-            switch (longMemberName)
-            {
-            case "Calculator.MainPage.OperandString":
-                userType = (global::Calculator.Calculator_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Calculator.MainPage");
-                xamlMember = new global::Calculator.Calculator_XamlTypeInfo.XamlMember(this, "OperandString", "String");
-                xamlMember.Getter = get_0_MainPage_OperandString;
-                xamlMember.Setter = set_0_MainPage_OperandString;
-                break;
-            }
+            // No Local Properties
             return xamlMember;
         }
     }

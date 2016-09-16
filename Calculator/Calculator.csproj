@@ -100,7 +100,7 @@
     </Compile>
     <Compile Include="CalculatorControls.cs" />
     <Compile Include="MathLayer.cs" />
-    <Compile Include="Engine.cs" />
+    <Compile Include="CalculatorEngine.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
