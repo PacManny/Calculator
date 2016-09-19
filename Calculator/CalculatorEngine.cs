@@ -12,14 +12,17 @@ namespace Calculator
         public List<string> NumericalBattleGround { get; set; }
         public List<double> Operands { get; set; } 
         public List<string> Operators { get; set; }
+        public string lastOperator { get; set; }
         public double Total { get; set; }
-        public string lastEntry { get; set; }
+        public string inputData { get; set; }
         public bool calculate { get; set; }
         MathLayer mathLayer = new MathLayer();
 
         public CalculatorEngine()
         {
+
             InitializeCalculator();
+
         }
 
         public void InitializeCalculator ()
@@ -28,85 +31,67 @@ namespace Calculator
             Operands = new List<double>();
             Operators = new List<string>();
             DisplayedNumber = "";
+            inputData = "";
             calculate = false;
-        }
-
-        public double ComputeCalculation()
-        {
-            int operatorsLength = Operators.Count();
-            int operandsLength = Operands.Count();
-
-            switch (Operators[operatorsLength - 1])
-            {
-                case "+":
-                    return doAddition(Operands[operandsLength - 2], Operands[operandsLength - 1]);
-
-                case "-":
-                    return doSubtraction(Operands[operandsLength - 2], Operands[operandsLength - 1]);
-
-                case "*":
-                    return doMultiplication(Operands[operandsLength - 2], Operands[operandsLength - 1]);
-
-                case "/":
-                    return doDivision(Operands[operandsLength - 2], Operands[operandsLength - 1]);
-
-                //case "=":
-                //    doEquals();
-                //    break;
-                default:
-                    return -1;
-
-            }
         }
 
         public void onNumberAdded()
         {
-            lastEntry = NumericalBattleGround[NumericalBattleGround.Count() - 1];
+            inputData += NumericalBattleGround[NumericalBattleGround.Count() - 1];
             string operand;
-            if (ContainsOperator(lastEntry))
+
+            if (ContainsOperator(inputData[inputData.Count() - 1].ToString()))
             {
-                Operators.Add(lastEntry);
-                NumericalBattleGround.Remove(lastEntry);
+
+                lastOperator = inputData[inputData.Count() - 1].ToString();
+                NumericalBattleGround.Remove(inputData[inputData.Count() - 1].ToString());
+                inputData = "";
                 operand = string.Join("", NumericalBattleGround.ToArray());
                 NumericalBattleGround.RemoveRange(0, NumericalBattleGround.Count());
-                Operands.Add(Convert.ToDouble(operand));
-                DisplayedNumber = operand.ToString();
-                if (calculate)
+                try
                 {
-                    ComputeCalculation();
-                    lastEntry = Total.ToString();
+                    Operands.Add(Convert.ToDouble(operand));
                 }
-                calculate = true;
+                catch
+                {
+
+                }
+                DisplayedNumber = Operands[Operands.Count() - 1].ToString();
+                CalculateOperation();
             }
-            else
+            if (ContainsNumber(inputData))
             {
-                DisplayedNumber += lastEntry;
+                DisplayedNumber = inputData;
+                if (lastOperator != null)
+                {
+                    Operators.Add(lastOperator);
+                    calculate = true;
+                    lastOperator = null;
+                }
             }
-            
+
         }
 
+        private void CalculateOperation()
+        {
+            if (calculate || lastOperator == "=")
+            {
+
+                ComputeCalculation();
+                Operands.RemoveRange(1, Operands.Count() - 1);
+                Operands.Add(Total);
+
+                DisplayedNumber = Total.ToString();
+                calculate = false;
+            }
+        }
+      
         public void AddToNumericalBattleGround (string userInput)
         {
             NumericalBattleGround.Add(userInput);
             onNumberAdded();
         }
 
-
-        //public string getLastEntry(string type)
-        //{
-        //    if(ContainsOperator(type))
-        //    {
-        //        lastEntry = Operators[Operands.Count() - 1].ToString();
-        //        return lastEntry;
-        //    }
-        //    lastEntry = Operands[Operands.Count() - 1].ToString();
-        //    return lastEntry;
-        //}
-            
-        //public void AddToList(string operand)
-        //{
-        //    Operands.Add(Convert.ToDouble(operand));
-        //}
         public double doAddition(double FirstNumber, double SecondNumber)
         {
             Total = mathLayer.Add(FirstNumber, SecondNumber);
@@ -127,11 +112,38 @@ namespace Calculator
             Total = mathLayer.Multiply(FirstNumber, SecondNumber);
             return Total;
         }
-        //public void doEquals()
-        //{
+        public void doEquals()
+        {
 
 
-        //}
+        }
+        public double ComputeCalculation()
+        {
+            int operatorsLength = Operators.Count();
+            int operandsLength = Operands.Count();
+
+            switch (Operators[operatorsLength - 1])
+            {
+                case "+":
+                    return doAddition(Operands[operandsLength - 2], Operands[operandsLength - 1]);
+
+                case "-":
+                    return doSubtraction(Operands[operandsLength - 2], Operands[operandsLength - 1]);
+
+                case "*":
+                    return doMultiplication(Operands[operandsLength - 2], Operands[operandsLength - 1]);
+
+                case "/":
+                    return doDivision(Operands[operandsLength - 2], Operands[operandsLength - 1]);
+
+                case "=":
+                    Operators.Remove("=");
+                    return ComputeCalculation();
+                default:
+                    return Operands[Operands.Count() - 1];
+
+            }
+        }
         public bool ContainsNumber(string lastEntry)
         {
             try
@@ -148,7 +160,7 @@ namespace Calculator
 
         public bool ContainsOperator(string MathOperator)
         {
-            List<string> validOperators = new List<string> { "+", "-", "/", "*" };
+            List<string> validOperators = new List<string> { "+", "-", "/", "*", "=" };
             return validOperators.Contains(MathOperator);
 
         }
