@@ -1,0 +1,15 @@
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\bin\Release\SimpleCalculator.exe.config
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\bin\Release\SimpleCalculator.exe
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\bin\Release\SimpleCalculator.pdb
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\obj\Release\GlassButton.baml
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\obj\Release\MainWindow.g.cs
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\obj\Release\App.g.cs
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\obj\Release\SimpleCalculator_MarkupCompile.cache
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\obj\Release\SimpleCalculator_MarkupCompile.lref
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\obj\Release\App.baml
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\obj\Release\MainWindow.baml
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\obj\Release\SimpleCalculator.g.resources
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\obj\Release\SimpleCalculator.Properties.Resources.resources
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\obj\Release\SimpleCalculator.csproj.GenerateResource.Cache
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\obj\Release\SimpleCalculator.exe
+C:\Users\eromero\Documents\Visual Studio 2015\Projects\SimpleCalculator\SimpleCalculator\obj\Release\SimpleCalculator.pdb

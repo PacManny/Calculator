@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace SimpleCalculator
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            CalculatorOutPutBox.Text = "0";
+        }
+        CalculatorEngine BasicCalculator = new CalculatorEngine();
+        private void ButtonClick(object sender, RoutedEventArgs e)
+        {
+            Button calculatorButton = (Button)sender;
+            BasicCalculator.Motor(calculatorButton.Content.ToString());
+            CalculatorOutPutBox.Text = BasicCalculator.DisplayedNumber;
+        }
+    }
+}
