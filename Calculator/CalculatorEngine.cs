@@ -69,7 +69,10 @@ namespace Calculator
                     lastOperator = null;
                 }
             }
-
+            if(inputData == "C")
+            {
+                ClearCalculator();
+            }
         }
 
         private void CalculateOperation()
@@ -160,8 +163,19 @@ namespace Calculator
 
         public bool ContainsOperator(string MathOperator)
         {
-            List<string> validOperators = new List<string> { "+", "-", "/", "*", "=" };
+            List<string> validOperators = new List<string> { "+", "-", "/", "*", "="};
             return validOperators.Contains(MathOperator);
+
+        }
+        public void ClearCalculator()
+        {
+            NumericalBattleGround = new List<string>();
+            Operands = new List<double>();
+            Operators = new List<string>();
+            DisplayedNumber = "0";
+            inputData = "";
+            calculate = false;
+            Total = 0;
 
         }
     }
